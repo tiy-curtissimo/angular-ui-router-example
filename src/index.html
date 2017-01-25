@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <title>Starter Page</title>
+    <link rel="stylesheet" href="pure-0.6.2.min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+    <style>header, main {max-width: 768px; margin: auto; margin-top: 4em;}</style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="pure-menu pure-menu-horizontal">
+          <li class="pure-menu-item"><a class="pure-menu-link pure-button" ui-sref-active="pure-button-primary" ui-sref="viewOne">view one</a></li>
+          <li class="pure-menu-item"><a class="pure-menu-link pure-button" ui-sref-active="pure-button-primary" ui-sref="viewTwo">view two</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main style="display: flex">
+      <div ui-view="left" style="flex: 0 0 175px; order: 2"></div>
+      <ui-view></ui-view>
+      <div ui-view="right" style="flex: 0 0 300px"></div>
+    </main>
+
+    <script src="angular-1.6.1.min.js"></script>
+    <script src="angular-resource-1.6.1.min.js"></script>
+    <script src="angular-ui-router-1.0-rc.min.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="view-one.component.js"></script>
+    <script src="view-two.component.js"></script>
+    <script src="left.component.js"></script>
+    <script src="right.component.js"></script>
+  </body>
+</html>
